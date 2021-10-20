@@ -1,0 +1,83 @@
+.app-container {
+    font-family: monospace;
+    width: 500px;
+    background-color: #F9F7F7;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px lightgray;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px 20px 0px 0px;
+    background-color: #7868E6;
+    color: #F9F7F7;
+}
+
+.form {
+    display: flex;
+    gap: 5px;
+}
+
+.form-control {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+.input-field {
+    height: 30px;
+    padding: 0px 0px 0px 15px;
+    width: 95%;
+	border-radius: 20px;
+	border-style: solid;
+	border-color: lightgrey;
+	border-width: 1px;
+	font-size: 15px;
+}
+
+.submit-btn {
+    height: 30px;
+    border-style: none;
+    background-color: #50CB93;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 0px 15px;
+}
+
+.task {
+    background-color: #ebebeb;
+    padding: 0px 15px;
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.task-text {
+    width: 90%;
+}
+
+.task-btn {
+    width: 7%;
+}
+
+.delete {
+    background-color: #EF6C57;
+    color: white;
+    border-style: none;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.important {
+    border-left: 5px solid #EF6C57;
+}
+
+.info {
+    color: #b3b3b3;
+    font-size: 70%;
+}
