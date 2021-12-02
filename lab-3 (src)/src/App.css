@@ -1,0 +1,20 @@
+.container {
+    width: 500px;
+    background-color: whitesmoke;
+    padding: 30px;
+    flex: content;
+    justify-content: center;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px lightgray;
+}
+
+.button {
+    border: none;
+    background-color: green;
+    outline: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+}
