@@ -30,7 +30,7 @@ export default function Products({ products, title, addItemToCart }) {
                 {pagesNumbers.map(page => {
                     return <button onClick={() => {
                         setCurrentPage(page);
-                    }} key={page}>{page}</button>
+                    }} key={page} class={`${page === currentPage && 'current-page'}`}>{page}</button>
                 })}
             </div>
         </div>

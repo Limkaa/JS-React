@@ -30,8 +30,15 @@ export default function App() {
     }
   }
 
-  function addItemToCart(item, number) {
-    setCartItems([...cartItems, {item, number}])
+  function addItemToCart(product, quantity) {
+    const items = cartItems.filter(item => {
+          if (item.product.id === product.id) {
+            quantity += item.quantity
+            return false
+          }
+          return true
+      });
+    return setCartItems([...items, {product, quantity}])
   }
 
   return (
