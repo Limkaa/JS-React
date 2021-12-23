@@ -65,7 +65,7 @@ main {
 .navigationOptions {
     padding: 15px;
     display: grid;
-    grid-template-columns: repeat(2, min-content) 1fr;
+    grid-template-columns: repeat(3, max-content) 1fr;
     font-size: 18px;
     color: white;
     column-gap: 20px;
@@ -75,12 +75,23 @@ main {
     justify-self: end;
 }
 
-a {
+.navigationOptions a {
+    color: white;
     text-decoration: none;
 }
 
-a:visited {
+.navigationOptions a:visited {
     color: white;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px;
+    border-radius: 50%;
+    text-align: center;
+    background: #FDB827;
+    color: black;
 }
 
 .container {
@@ -102,13 +113,25 @@ a:visited {
 
 .login-form {
     width: 300px;
+    padding: 30px;
+    border-radius: 10px;
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr;
+    row-gap: 20px;
     margin: 0 auto;
-    
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.input-field {
+.login-form .heading {
+    /* margin-bottom: 20px; */
+}
+
+.login-form .fields-group {
+    width: 100%;
+}
+
+.login-form .input-field {
     height: 30px;
     width: inherit;
 	border-radius: 10px;
@@ -116,8 +139,8 @@ a:visited {
 	border-color: lightgrey;
 	border-width: 1px;
 	font-size: 15px;
-    margin-bottom: 10px;
-    padding: 0px
+    padding: 0px;
+    margin-bottom: 3px;
 }
 
 .btn {
@@ -126,7 +149,6 @@ a:visited {
 }
 
 .login-form .btn {
-    background-color: dodgerblue;
     height: 30px;
     border-style: none;
     background-color: #50CB93;
@@ -138,7 +160,6 @@ a:visited {
 .hint {
     color: grey;
     font-size: 15px;
-    margin-bottom: 5px;
 }
 
 .products-layout {

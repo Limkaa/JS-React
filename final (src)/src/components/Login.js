@@ -14,10 +14,15 @@ export default function Login({ authed,  setAuthed, check }) {
 
   return (
     <form className="center login-form">
-      <h4 className="hint">Usernames: Pablo, Mark, Kate, Jane</h4>
-      <input className="input-field" type="text" onChange={(event => setUsername(event.target.value))}/>
-      <h4 className="hint">Password is username in lowercase</h4>
-      <input className="input-field" type="password" onChange={(event => setPassword(event.target.value))}/>
+      <div className="heading">Login into your account</div>
+      <div className="fields-group">
+        <input className="input-field" type="text" onChange={(event => setUsername(event.target.value))}/>
+        <h4 className="hint">Usernames: Pablo, Mark, Kate, Jane</h4>
+      </div>
+      <div className="fields-group">
+        <input className="input-field" type="password" onChange={(event => setPassword(event.target.value))}/>
+        <h4 className="hint">Password is username in lowercase</h4>
+      </div>
       <button className="btn" onClick={onLogin}>
         Login
       </button>

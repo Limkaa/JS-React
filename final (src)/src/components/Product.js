@@ -1,6 +1,8 @@
 import React from "react"
 
-export default function Product({ product }) {
+import addItemToCart from '../App'
+
+export default function Product({ product, addItemToCart }) {
   return (
     <div className="card">
         <img src={product.image} className="image" alt="img"></img>
@@ -9,7 +11,9 @@ export default function Product({ product }) {
         <div className="price">Price: {product.price}$</div>
         <div className="buttons">
             <button className="buy-now">Buy now</button>
-            <button className="add-to-cart">Add to cart</button>
+            <button onClick={() => {
+                addItemToCart(product, 1)
+            }} className="add-to-cart">Add to cart</button>
         </div>
     </div>
   )

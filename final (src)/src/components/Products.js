@@ -3,7 +3,7 @@ import Product from "./Product";
 // import { Link } from 'react-router-dom';
 
 
-export default function Products({ products, title }) {
+export default function Products({ products, title, addItemToCart }) {
     const [displayedProducts, setDisplayedProducts] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
     const [pagesNumbers, setPagesNumbers] = useState([])
@@ -24,9 +24,7 @@ export default function Products({ products, title }) {
         <div className="products">
             <div className="heading">{title}</div>
             <div className="outlet">
-                {displayedProducts.map(item => {
-                    return <Product product={item} key={item.id}/>
-                })}
+                {displayedProducts.map(item => <Product product={item} addItemToCart={addItemToCart}/>)}
             </div>
             <div className="paggination">
                 {pagesNumbers.map(page => {

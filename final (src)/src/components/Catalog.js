@@ -3,7 +3,7 @@ import React, { useState, useEffect} from "react";
 // import { Link } from 'react-router-dom';
 import Products from "./Products";
 
-export default function Categories() {
+export default function Categories({ addItemToCart }) {
     const filters = [
         {title: 'Price 🔻', field: 'price', sort: 'desc'},
         {title: 'Price 🔺', field: 'price', sort: 'asc'},
@@ -49,7 +49,7 @@ export default function Categories() {
 
     return (
         <div className="products-layout">
-            <Products products={displayedProducts} title={currentCategory}/>
+            <Products products={displayedProducts} title={currentCategory} addItemToCart={addItemToCart}/>
             <div className="sidebar">
                 <div className="grid">
                     <div className="heading">Categories</div>
