@@ -1,0 +1,316 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    padding: 20px;
+    row-gap: 20px;
+}
+
+.navigation {
+    /* background-color: #1FAB89; */
+    background-color: #6900FF;
+    border-radius: 10px;
+}
+
+.navigationOptions {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, min-content) 1fr;
+    font-size: 18px;
+    color: white;
+    column-gap: 20px;
+}
+
+.navigationOptions li:last-child {
+    justify-self: end;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+.container {
+    padding: 30px;
+}
+
+.center {
+    text-align: center;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+.login-form {
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    
+}
+
+.input-field {
+    height: 30px;
+    width: inherit;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: lightgrey;
+	border-width: 1px;
+	font-size: 15px;
+    margin-bottom: 10px;
+    padding: 0px
+}
+
+.btn {
+    width: inherit;
+    margin: 0 auto;
+}
+
+.login-form .btn {
+    background-color: dodgerblue;
+    height: 30px;
+    border-style: none;
+    background-color: #50CB93;
+    color: white;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.hint {
+    color: grey;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.products-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    column-gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.products {
+    width: inherit;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    row-gap: 20px;
+    padding: 20px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 10px;
+    height: min-content;
+}
+
+.products .heading {
+    text-transform: capitalize;
+}
+
+.products .outlet {
+    width: inherit;
+    /* background-color: #50CB93; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.products .paggination {
+    margin-top: 20px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.products .paggination button {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-style: none;
+    background-color: #6900FF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.sidebar .grid {
+    display: grid;
+    height: min-content;
+    grid-auto-rows: minmax(min-content, max-content);
+    padding: 20px;
+    grid-template-columns: 1fr;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 10px;
+    row-gap: 20px;
+    /* background-color: #676FA3; */
+    /* background-color: #6900FF; */
+    /* color: white; */
+}
+
+.sidebar .grid .options {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.13), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    /* background-color: #FAF7FF; */
+    color: black;
+}
+
+.sidebar .grid .options .title {
+    padding: 12px;
+    border-bottom: solid 1px lightgray;
+    font-weight: 400;
+    font-size: larger;
+    text-transform: capitalize;
+}
+
+.sidebar .grid .options .title:last-child {
+    border-bottom:none;
+    margin-bottom:0;
+}
+
+.sidebar .grid .options .chosen {
+    background-color: #1FAB89;
+    color: white;
+}
+
+.sidebar .grid .options li:first-child.chosen {
+    border-radius: 10px 10px 0 0;
+}
+
+.sidebar .grid .options li:last-child.chosen {
+    border-radius: 0 0 10px 10px;
+}
+
+.sidebar .grid .options li:only-child.chosen {
+    border-radius: 10px;
+}
+
+.card {
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    display: grid;
+    height: 350px;
+    grid-auto-rows: repeat(4, minmax(min-content, max-content)) max-content;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    color: black;
+    background-color: white;
+}
+
+.card .image {
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    justify-self: center;
+    border-bottom: solid 1px lightgray;
+}
+
+.card .title {
+    padding: 0 10px;
+    font-weight: 700;
+}
+
+
+.card .rating {
+    padding: 0 10px;
+    font-weight: 200;
+    color: darkgray;
+    font-size: smaller;
+}
+
+.card .price {
+    padding: 0 10px;
+    font-weight: 400;
+    color: rgb(80, 80, 80);
+    font-size: medium;
+}
+
+.card .buttons {
+    display: grid;
+    align-self: end;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.card .buttons .buy-now {
+    height: 30px;
+    border-style: none;
+    background-color: #1FAB89;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.card .buttons .add-to-cart {
+    height: 30px;
+    border-style: none;
+    background-color: #FCE38A;
+    color: black;
+    font-size: 15px;
+    border-radius: 5px;
+}
