@@ -14,7 +14,7 @@ export default function Categories({ addItemToCart }) {
     const [products, setProducts] = useState([])
     const [displayedProducts, setDisplayedProducts] = useState([])
     const [categories, setCategories] = useState(['All products'])
-    // const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
     const [currentCategory, setCurrentCategory] = useState('All products')
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export default function Categories({ addItemToCart }) {
             setCategories(['All products', ...json])
         })
         .catch(err => alert(err))
-
+    
         fetch('https://fakestoreapi.com/products')
         .then(res => res.json())
         .then(json => {
@@ -33,7 +33,7 @@ export default function Categories({ addItemToCart }) {
         })
         .catch(err => alert(err))
 
-        // setLoading(false)
+        setLoading(false)
     }, [])
 
     // Filtering products array
@@ -49,7 +49,7 @@ export default function Categories({ addItemToCart }) {
 
     return (
         <div className="products-layout">
-            <Products products={displayedProducts} title={currentCategory} addItemToCart={addItemToCart}/>
+            <Products products={displayedProducts} title={currentCategory} addItemToCart={addItemToCart} loading={loading}/>
             <div className="sidebar">
                 <div className="grid">
                     <div className="heading">Categories</div>

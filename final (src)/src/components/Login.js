@@ -1,16 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function Login({ authed,  setAuthed, check }) {
+import { useDispatch, useSelector } from "react-redux";
+
+export default function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const loginned = useSelector(store => store.profile).loginned
+  const dispatch = useDispatch()
+
   function onLogin() {
-    if (check(username, password)===true) {
-      navigate('/home');
-    }
+    dispatch({
+      type: 'login',
+      payload: {
+        username, 
+        password
+      }
+    })
+    setUsername('')
+    setPassword('')
   }
+
+  useEffect(() => {
+    if (loginned) {
+      navigate('/home')
+    }
+  })
+
 
   return (
     <form className="center login-form">

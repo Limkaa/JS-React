@@ -3,7 +3,7 @@ import Product from "./Product";
 // import { Link } from 'react-router-dom';
 
 
-export default function Products({ products, title, addItemToCart }) {
+export default function Products({ products, title, addItemToCart, loading }) {
     const [displayedProducts, setDisplayedProducts] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
     const [pagesNumbers, setPagesNumbers] = useState([])
@@ -23,16 +23,20 @@ export default function Products({ products, title, addItemToCart }) {
         // <div>Hello</div>
         <div className="products">
             <div className="heading">{title}</div>
-            <div className="outlet">
-                {displayedProducts.map(item => <Product product={item} addItemToCart={addItemToCart}/>)}
-            </div>
-            <div className="paggination">
-                {pagesNumbers.map(page => {
-                    return <button onClick={() => {
-                        setCurrentPage(page);
-                    }} key={page} class={`${page === currentPage && 'current-page'}`}>{page}</button>
-                })}
-            </div>
+            { loading ? "Loading..." :
+                <div className="outlet">
+                    {displayedProducts.map(item => <Product product={item} key={item.id} addItemToCart={addItemToCart}/>)}
+                </div>
+            }
+            { !loading &&
+                <div className="paggination">
+                    {pagesNumbers.map(page => {
+                        return <button onClick={() => {
+                            setCurrentPage(page);
+                        }} key={page} className={`${page === currentPage && 'current-page'}`}>{page}</button>
+                    })}
+                </div>
+            }
         </div>
     )
   }
