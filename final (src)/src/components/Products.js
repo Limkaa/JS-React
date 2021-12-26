@@ -20,7 +20,6 @@ export default function Products({ products, title, addItemToCart, loading }) {
     }, [products])
 
     return (
-        // <div>Hello</div>
         <div className="products">
             <div className="heading">{title}</div>
             { loading ? "Loading..." :

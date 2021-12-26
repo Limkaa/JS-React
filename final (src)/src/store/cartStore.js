@@ -27,6 +27,9 @@ export default function cart(state = [], action) {
             state[action.payload].quantity += 1
             return ([...state])
 
+        case 'clear_cart':
+            return ([])
+
         default:
             return state
     }

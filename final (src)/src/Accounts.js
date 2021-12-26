@@ -5,7 +5,8 @@ export const accounts = [
       surname: "Jackson",
       age: "34",
       country: "USA",
-      password: "pablo"
+      password: "pablo",
+      balance: 10000,
     },
     {
       id: 2,
@@ -13,7 +14,8 @@ export const accounts = [
       surname: "Madison",
       age: "29",
       country: "Spain",
-      password: "kate"
+      password: "kate",
+      balance: 4500,
     },
     {
       id: 3,
@@ -21,7 +23,8 @@ export const accounts = [
       surname: "Davison",
       age: "30",
       country: "Canada",
-      password: "mark"
+      password: "mark",
+      balance: 5200,
     },
     {
       id: 4,
@@ -29,6 +32,7 @@ export const accounts = [
       surname: "Mur",
       age: "37",
       country: "France",
-      password: "jane"
+      password: "jane",
+      balance: 2500,
     },
   ]

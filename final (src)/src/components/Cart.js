@@ -6,7 +6,9 @@ import { useSelector } from "react-redux";
 
 export default function Cart() {
     let total_amount =  0
-    const cart = useSelector(state => state.cart)
+    const store = useSelector(state => state)
+    const cart = store.cart
+    const profile = store.profile 
     
     cart.forEach(item => total_amount += Math.ceil(item.quantity * item.product.price));
 
@@ -26,6 +28,7 @@ export default function Cart() {
                 <div className="sidebar">
                     <div className="heading">Total amount:</div>
                     <div className="total-amount">{total_amount}$</div>
+                    {profile.account.balance < total_amount && <div className="warning">Not enough money on your balance!</div> }
                 </div>
             </div>
     )

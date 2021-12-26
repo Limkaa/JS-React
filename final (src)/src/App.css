@@ -75,6 +75,11 @@ main {
     padding: 5px 10px;
 }
 
+.navigationOptions .right-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .navigationOptions li:last-child {
     justify-self: end;
 }
@@ -471,4 +476,11 @@ main {
 .cart .sidebar .total-amount {
     font-weight: 600;
     font-size: larger;
+}
+
+.warning {
+    background-color: #F8485E;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
 }

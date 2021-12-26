@@ -18,7 +18,6 @@ export default function Categories({ addItemToCart }) {
     const [currentCategory, setCurrentCategory] = useState('All products')
 
     useEffect(() => {
-        console.log('try')
         fetch('https://fakestoreapi.com/products/categories')
         .then(res => res.json())
         .then(json => {
@@ -69,16 +68,6 @@ export default function Categories({ addItemToCart }) {
                         })}
                     </ul>
                 </div>
-                {/* <div className="grid">
-                    <div className="heading">Filters</div>
-                    <ul className="options">
-                        {filters.map((item, index) => {
-                            return <li onClick={
-                                () => {setCurrentFilter(item)}
-                            } key={index} className={`title ${item.title === currentFilter.title && 'chosen'}`}>{item.title}</li>
-                        })}
-                    </ul>
-                </div> */}
             </div>
         </div>
     )

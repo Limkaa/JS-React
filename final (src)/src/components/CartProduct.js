@@ -30,7 +30,6 @@ export default function CartProduct({index, item}) {
     return (
         <div className="row">
             <div><img src={product.image} className="image" alt="img"></img></div>
-            {/* <div class="information"> */}
             <div className="title">{product.title}</div>
             <div className="price">{product.price}$</div>
             <div className="quantity">
