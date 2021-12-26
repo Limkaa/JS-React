@@ -32,7 +32,7 @@ export default function Products({ products, title, addItemToCart, loading }) {
                     {pagesNumbers.map(page => {
                         return <button onClick={() => {
                             setCurrentPage(page);
-                        }} key={page} className={`${page === currentPage && 'current-page'}`}>{page}</button>
+                        }} key={page} className={`action-button ${page === currentPage && 'current-page'}`}>{page}</button>
                     })}
                 </div>
             }

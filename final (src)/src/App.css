@@ -65,7 +65,7 @@ main {
 .navigationOptions {
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(3, max-content) 1fr;
+    grid-template-columns: repeat(2, max-content) 1fr;
     font-size: 18px;
     color: white;
     column-gap: 10px;
@@ -77,7 +77,8 @@ main {
 
 .navigationOptions .right-nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content 1fr;
+    column-gap: 20px;
 }
 
 .navigationOptions li:last-child {
@@ -94,14 +95,7 @@ main {
 }
 
 .navigationOptions .not-empty-cart {
-    /* display: inline-block; */
-    /* min-width: 10px; */
-    /* padding: 3px; */
-    /* border-radius: 5px; */
-    /* text-align: center; */
     border-radius: 5px;
-    /* background: #FDB827; */
-    /* background: #FCE38A; */
     background: #FDB827;
 }
 
@@ -134,28 +128,19 @@ main {
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1), 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.login-form .fields-group {
-    width: 100%;
-}
-
 .login-form .input-field {
-    height: 30px;
-    width: inherit;
+    width: 80%;
 	border-radius: 10px;
 	border-style: solid;
 	border-color: lightgrey;
 	border-width: 1px;
 	font-size: 15px;
-    padding: 0px;
+    padding: 5px 20px;
     margin-bottom: 3px;
 }
 
-.btn {
-    width: inherit;
-    margin: 0 auto;
-}
-
 .login-form .btn {
+    width: 80%;
     height: 30px;
     border-style: none;
     background-color: #50CB93;
@@ -207,9 +192,8 @@ main {
     flex-wrap: wrap;
 }
 
-.products .paggination button {
-    height: 30px;
-    width: 30px;
+.action-button {
+    padding: 10px;
     margin-right: 10px;
     border-style: none;
     background-color: #6900FF;
@@ -220,8 +204,7 @@ main {
 }
 
 .products .paggination button.current-page {
-    height: 40px;
-    width: 40px;
+    padding: 10px 20px;
     background-color: #1FAB89;
     color: white;
 }
@@ -238,12 +221,8 @@ main {
     grid-auto-rows: minmax(min-content, max-content);
     padding: 20px;
     grid-template-columns: 1fr;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     border-radius: 10px;
     row-gap: 20px;
-    /* background-color: #676FA3; */
-    /* background-color: #6900FF; */
-    /* color: white; */
 }
 
 .sidebar .grid .options {
@@ -478,9 +457,30 @@ main {
     font-size: larger;
 }
 
+.cart .sidebar .buy-products {
+    background-color: #1FAB89;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    border-style: none;
+    font-size: medium;
+} 
+
 .warning {
     background-color: #F8485E;
     border-radius: 10px;
     padding: 10px;
     color: white;
+}
+
+.cart .sidebar .deposit {
+    margin-top: 10px;
+    width: 100%;
+    background-color: white;
+    color: #6900FF;
+    padding: 10px;
+    border-style: none;
+    border-radius: 10px;
+    font-weight: 700;
 }
