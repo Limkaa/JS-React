@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from "react";
 import Product from "./Product";
-// import { Link } from 'react-router-dom';
 
 
 export default function Products({ products, title, addItemToCart, loading }) {

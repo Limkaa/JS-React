@@ -1,9 +1,8 @@
 import React, { useState, useEffect} from "react";
-
-// import { Link } from 'react-router-dom';
 import Products from "./Products";
 
-export default function Categories({ addItemToCart }) {
+
+export default function Catalog({ addItemToCart }) {
     const filters = [
         {title: 'Price 🔻', field: 'price', sort: 'desc'},
         {title: 'Price 🔺', field: 'price', sort: 'asc'},
